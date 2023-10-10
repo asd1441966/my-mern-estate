@@ -1,8 +1,17 @@
-import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { About, Home, Profile, SignIn, SignUp } from './pages/index'
 
 function App() {
   return (
-    <div className='text-red-500 text-lg'>App</div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/sign-in' element={<SignIn />} />
+      <Route path='/sign-up' element={<SignUp />} />
+      <Route path='/profile' element={<Profile />} />
+      <Route path='/about' element={<About />} />
+    </Routes>
+    </BrowserRouter>
   )
 }
 
